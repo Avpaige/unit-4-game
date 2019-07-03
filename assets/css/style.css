@@ -1,0 +1,22 @@
+html {
+    background-image: url("../images/food.png");
+ }
+
+.jumbotron{
+
+    background-color:white;
+
+}
+
+.col-6{
+margin-bottom: 25px;
+
+}
+
+.text-center{
+
+    font-weight: bold;
+    color: rgb(219, 147, 14);
+}
+
+
