@@ -1,5 +1,5 @@
 //set vars
-//set value of gems
+//generate value of gems
 //assign value of gems
 //set total order price
 //determine if gem total is higher or lower than order total
@@ -8,26 +8,59 @@
     //reset value of gems and order total
 
 
-var steak 
-var pretzel
-var tasty
-var wooder
+
 var win = 0;
 var loss = 0;
 var orderTot = Math.floor((Math.random()*120)+19);
+var custTot= 0;
 
-var crystalNum = [];
+var menuValue = [];
     for (var i = 0; i < 4; i++)
-    {crystalNum.push(Math.floor(Math.random() * 12) + 1)
+    {menuValue.push(Math.floor(Math.random() * 12) + 1)
         }var str = "";
     for (var i = 0; i < 4; i++)
-    {str += "," + crystalNum[i];
+    {str += "," + menuValue[i];
     }
 
- $("html").onclick();
+
+$(".orderTot").text("The random order total is: "+ orderTot);
+$(".scoreboard").text("Wins: "+ win, "Losses: "+ loss);
 
 
+var menuItems = $("img");
+menuItems.attr("menuvalue", menuValue[i]);
+
+var reset = function(){
+    //reset order total and menu item values
+}
 
 
 console.log("The order Total is " + orderTot);
-console.log("The crsytal numbers are " + crystalNum);
+console.log("The menu item costs are " + menuValue);
+
+$(".menuitems").on("click", function(){
+
+    alert("click listener is working");
+    
+var menuValue = ($(this).attr("menuvalue"));
+var menuValue=parseInt(menuValue);
+menuValue+=custTot;
+
+$(".custTot").text("Your order total is: "+ custTot);
+
+
+
+if (custTot===orderTot){
+    wins++;
+    reset();
+}else if (custTot>orderTot){
+    losses++;
+    reset();
+
+}
+});
+
+console.log("menu value is "+ menuValue);
+console.log("customer order total is " + custTot);
+console.log("wins are "+ win);
+console.log("lossess are " + loss);

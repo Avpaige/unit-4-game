@@ -9,14 +9,41 @@ html {
 }
 
 .col-6{
-margin-bottom: 25px;
-
+margin-bottom: 15px;
+margin-top: 5px;
 }
 
-.text-center{
-
+h1{
+    
     font-weight: bold;
-    color: rgb(219, 147, 14);
+    color: rgb(156, 102, 9);
 }
 
+p{
+    
+    color: rgb(156, 102, 9);
+}
 
+.header {
+    height: 300px;
+
+
+}
+
+.col-10{
+    
+font-size: 15px;
+line-height: 125%;
+}
+
+.test{
+    background-color: transparent;
+
+
+}
+
+.menuitems{
+    width:200px;
+    height:150px;
+
+}
