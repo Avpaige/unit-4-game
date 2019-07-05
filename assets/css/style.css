@@ -1,49 +1,117 @@
 html {
     background-image: url("../images/food.png");
  }
-
-.jumbotron{
-
-    background-color:white;
-
-}
-
-.col-6{
-margin-bottom: 15px;
-margin-top: 5px;
+.container{
+    background-color: white;
+    width: 750px;
+    height: 275px;
+    margin-left: 100px;
+    padding-top: 5px;
+    border-radius: 25px;
+    margin-top: 30px;
 }
 
 h1{
     
     font-weight: bold;
     color: rgb(156, 102, 9);
+    text-align: center;
 }
 
 p{
-    
+    text-align: center;
     color: rgb(156, 102, 9);
+    font-weight: bold;
 }
 
-.header {
-    height: 300px;
 
-
+.scoreboard{
+    border-radius: 25px;    
+    color: rgb(156, 102, 9);
+    background-color: white;
+    width:235px;
+    height: 235px;
+    padding-left: 20px;
+    font-weight: bold;
+    padding-top: 20px;
+    font-size: 25px;
+    float:right;
+    position: relative;
+    top: -275px;
+    right: 50px;
 }
-
-.col-10{
-    
-font-size: 15px;
-line-height: 125%;
-}
-
-.test{
-    background-color: transparent;
-
-
-}
-
 .menuitems{
     width:200px;
     height:150px;
+    border-radius: 25px;
+   
+}
 
+.menu{
+    background-color: white;
+    width: 850px;
+    height: 300px;
+    margin-left: 50px;
+    padding-left: 15px;
+    padding-right: 10px;
+    border-radius: 25px;
+    text-align: center;
+    color: rgb(156, 102, 9);
+    font-weight: bold;
+    font-size: 30px;
+}
+
+h2{
+    padding-top:20px;
+    text-decoration: underline;
+}
+
+h3{
+    
+    text-decoration: underline;
+    padding:auto;
+    font-size: 25px;
+}
+
+h4{
+    
+    text-decoration: underline;
+    padding:auto;
+    font-size: 25px;
+}
+
+
+.total{
+    border-radius: 25px;    
+    color: rgb(156, 102, 9);
+    background-color: white;
+    width: 250px;
+    height: 250px;
+    text-align: center;
+    font-weight: bold;
+    float:right;
+    position: relative;
+    top: -270px;
+    right: 50px;
+
+}
+
+.orderTot{
+    text-align: center;
+    color: rgb(156, 102, 9);
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    left: -40px;
+
+}
+
+.custTot{
+    text-align: center;
+    color: rgb(156, 102, 9);
+    font-weight: bold;
+    font-size: 20px;
+    position: relative;
+    left: -55px;
+    
 }

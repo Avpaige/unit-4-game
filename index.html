@@ -20,22 +20,21 @@
             <p>You'll be given a random order total at the start of the game.
               <br> Click on one of the four menu items below, and a specific amount will be added to your order total.
     
-              <br><br> Win your order for free by matching the random order total! 
+              <br><br> Win your order for free by matching the random order total with your own order total! 
                
-              <br>   <br> Go over the total and you've lost! Be prepared to fork over some cash!
+              <br>   <br> Go over the total and be prepared to fork over some cash because, you've lost!!
             
-              <br><br>The value of each menu item is hidden until you click, and the order will change with each new game.
+              <br><br>The value of each menu item is hidden until you click, and the value will change with each new game.
             
                         
               </p>
         </div>
  </div>
-      
+ 
+<div class="scoreboard"> <h3>SCOREBOARD</h3> <br>Wins: <span id="wins"></span><br> Losses:<span id="loss"></span> </div>
 
- <div class="orderTot">The random order total is: <span id="random"></span></div>
 
-
-            <div class="Menu">
+            <div class="menu">
                 <h2>Menu</h2>
                 <img alt="cheesesteak" id="cheese" class="menuitems" src="assets/images/cheese.jpg" > 
                 <img alt="pretzel" id="pretzel" class="menuitems" src="assets/images/pretzel.jpg"> 
@@ -43,9 +42,12 @@
                 <img alt="waterice"  id="wooder" class="menuitems" src="assets/images/wooder.jpg"> 
             </div>
 
-<div class="cusTot">Your order total is:</div>
-
-<div class="scoreboard">Wins: <span id="wins"></span><br> Losses:<span id="loss"></span> </div>
+            
+<div class="total">
+  <h4>TOTALS</h4>
+<div class="orderTot">Random Order: <span id="random"></span></div>
+<div class="myOrd">Your Order:</div>
+</div>
 
 </body>
 </html>
