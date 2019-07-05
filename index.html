@@ -9,8 +9,7 @@
   <link rel="stylesheet" type="text/css" href="assets/css/style.css">
 </head>
 
-
-
+<body>
 
   <div class="container">
     
@@ -33,17 +32,20 @@
  </div>
       
 
- <div class="orderTot">The random order total is: </div>
+ <div class="orderTot">The random order total is: <span id="random"></span></div>
 
 
             <div class="Menu">
                 <h2>Menu</h2>
-                <img class="menuitems" src="assets/images/cheese.jpg" > 
-                <img class="menuitems" src="assets/images/pretzel.jpg"> 
-                <img class="menuitems" src="assets/images/tasty.jpg"> 
-                <img class="menuitems" src="assets/images/wooder.jpg"> 
+                <img alt="cheesesteak" id="cheese" class="menuitems" src="assets/images/cheese.jpg" > 
+                <img alt="pretzel" id="pretzel" class="menuitems" src="assets/images/pretzel.jpg"> 
+                <img alt="tastykake"  id="tasty" class="menuitems" src="assets/images/tasty.jpg"> 
+                <img alt="waterice"  id="wooder" class="menuitems" src="assets/images/wooder.jpg"> 
             </div>
 
 <div class="cusTot">Your order total is:</div>
 
-<div class="scoreboard">Wins: <br> Losses: </div>
+<div class="scoreboard">Wins: <span id="wins"></span><br> Losses:<span id="loss"></span> </div>
+
+</body>
+</html>
