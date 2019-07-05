@@ -12,17 +12,24 @@ var tasty = Math.floor((Math.random() * 12) + 1);
 var cheese=Math.floor((Math.random() * 12) + 1);
 
 
-function reset(){
-wooder=wooder;
-pretzel=pretzel;
-tasty=tasty;
-cheese=cheese;
-orderTot=orderTot;
-}
+console.log("wooder is qual to: " + wooder);
+console.log(typeof wooder);
+
+// function reset(){
+// wooder=wooder;
+// pretzel=pretzel;
+// tasty=tasty;
+// cheese=cheese;
+// orderTot=orderTot;
+// }
 
 $(document).ready(function() {
-   $("img").on("click", function(){
-    custTot+=this;
+   $(".menuitems").on("click", function(){
+ if($("#wooder")) {
+    custTot+= wooder;
+    console.log("customer total is : " + custTot);
+    console.log(typeof custToT);
+ }  
 if (custTot===orderTot){
     alert("You win!");
     wins++;
@@ -33,9 +40,10 @@ if (custTot===orderTot){
     losses++;
     $("#loss").text(loss);
     reset();
-} else ("img").on("click", function() {
-    custTot+=this;
-        });
+}
+//  else (".menuitems").on("click", function() {
+//     custTot+=this;
+//         });
     });
 });
 
