@@ -102,16 +102,16 @@ h4{
     font-weight: bold;
     font-size: 20px;
     position: relative;
-    left: -40px;
+    left: -30px;
 
 }
 
-.custTot{
+.myOrd{
     text-align: center;
     color: rgb(156, 102, 9);
     font-weight: bold;
-    font-size: 25px;
+    font-size: 20px;
     position: relative;
-    left: -25px;
+    left: -40px;
     
 }
