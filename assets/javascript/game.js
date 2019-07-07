@@ -1,3 +1,4 @@
+$(document).ready(function() {
 var win = 0;
 var loss = 0;
 
@@ -6,69 +7,57 @@ $("#random").html(orderTot);
 
 var custTot= 0;
 
+
 var wooder =Math.floor((Math.random() * 12-1+1) + 1);
 var pretzel=Math.floor((Math.random() * 12-1+1) + 1);
 var tasty = Math.floor((Math.random() * 12-1+1) + 1);
 var cheese=Math.floor((Math.random() * 12-1+1) + 1);
 
-function reset(){
-wooder=Math.floor((Math.random() * 12) + 1);
-pretzel=Math.floor((Math.random() * 12) + 1);
-tasty=Math.floor((Math.random() * 12) + 1);
-cheese=Math.floor((Math.random() * 12-1+1) + 1);
-orderTot=Math.floor((Math.random()*120-19+1)+19);
-$("#random").html(orderTot);
-custTot= 0;
-$("#receipt").html(custTot);
+function startGame(){
+    $("#pretzel").attr("data-value", pretzel);
+    $("#tasty").attr("data-value", tasty);
+    $("#wooder").attr("data-value", wooder);
+    $("#cheese").attr("data-value", cheese);
+    orderTot= Math.floor((Math.random()*120-19+1)+19);
+    $("#random").html(orderTot);
+    custTot= 0;
+    $("#receipt").html(custTot);
+    console.log(pretzel)
 }
 
-$(document).ready(function() {
-   $(".menuitems").on("click", function(){
+function reset() {
+    wooder = Math.floor((Math.random() * 12-1+1) + 1);
+    pretzel= Math.floor((Math.random() * 12-1+1) + 1);
+    tasty = Math.floor((Math.random() * 12-1+1) + 1);
+    cheese= Math.floor((Math.random() * 12-1+1) + 1);
+
+}
+
+startGame();
+
+
+$(".menuitems").on("click", function(){
+    var value=$(this).data().value;
+    custTot=value+custTot;
+    $("#receipt").html(custTot);
     $("#random").html(orderTot);
 if (custTot===orderTot){
-        reset();
-        alert("You win, your order is free!");
+        
+    alert("You win, your order is free!");
         win++;
         $("#wins").html(win);
         reset();
-} else if (custTot>= orderTot){
-        reset(); 
-        alert("You lost! Hope you brought cash!");
+        startGame();
+} else if (custTot> orderTot){
         loss++;
         $("#loss").html(loss);
-} else if($("#wooder")) {
-    custTot= wooder + custTot;
-    $("#receipt").html(custTot);
- } else if($("#pretzel")) {
-    custTot= pretzel + custTot;
-    $("#receipt").html(custTot);
-} else if($("#cheese")) {
-    custTot= cheese + custTot;
-    $("#receipt").html(custTot);
-}else if($("#tasty")) {
-    custTot= tasty + custTot;
-    $("#receipt").html(custTot);
-  }
+        reset();
+        startGame();
+        alert("You lost! Hope you brought cash!");
+    
+}
 
-  console.log("wooder is: " + wooder);
-  console.log("cheese is: " + cheese);
-  console.log("pretzel is: " + pretzel);
-  console.log("Tasty is: " + tasty);
      });
 });
 
 
-
-// var menuValue = [];
-//     for (var i = 0; i < 4; i++)
-//     {menuValue.push(Math.floor(Math.random() * 12) + 1)
-//         }var str = "";
-//     for (var i = 0; i < 4; i++)
-//     {str += "," + menuValue[i];
-
-// }
-
-// var menuItems= $("img");
-// menuItems.addClass("menuitems");
-// menuItems.attr("menu-value", menuValue[i]);
- 
